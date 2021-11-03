@@ -16,4 +16,11 @@ class MovieController extends Controller
 
         return view('movies.index', compact('movies'));
     }
+
+    public function show($id)
+    {
+        var_dump($id);
+
+        return view('movies.show', ['id' => $id]);
+    }
 }

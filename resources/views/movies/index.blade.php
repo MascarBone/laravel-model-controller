@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title','Index')
+
 @section('content')
 
 <div class="container">
@@ -7,7 +9,7 @@
         @foreach ($movies as $movie)
             <div class="col-3">
                 <div class="card">
-                    <div class="card-header">{{$movie->title}}</div>
+                    <div class="card-header"><a href="{{route('movie', ['id'=>$loop->index])}}">{{$movie->title}}</a></div>
                     <div class="card-body">
                         <h6 class="card-title">{{$movie->original_title}}</h6>
                         <p class="card-text">{{$movie->nationality}}</p>
