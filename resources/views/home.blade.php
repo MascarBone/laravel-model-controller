@@ -3,8 +3,9 @@
 @section('content')
 
 <pre>
-    {{-- {{var_dump($dati)}} --}}
+    {{-- {{var_dump($movies)}} --}}
     <h1>testing</h1>
+    <h2>{{$movies[0]->title}}</h2>
 </pre>
     
     
